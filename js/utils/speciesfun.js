@@ -157,18 +157,18 @@ function displaySpecies_BS(somespeciesafter,d) {
 		var divLine = document.createElement("div");
 		divLine.setAttribute("class","row");
 		divLine.setAttribute("style", "padding:10px; margin: 0px");
-		for (col = 0; col <6; col ++ ) {
+		for (col = 0; col <4; col ++ ) {
 			if (i >= nbspec) {
 				break;
 			}
 			var divCol = document.createElement("div");
-			divCol.setAttribute("class","col-xs-2");
+			divCol.setAttribute("class","col-xs-3");
 			var fig = document.createElement("figure");
 			fig.setAttribute("class","figure");
 			var divImage = document.createElement("img");
 			imageName = data[i];
 	  	divImage.setAttribute("src", pictureDir+"/"+imageName+".jpg");
-	  	divImage.setAttribute("style", "width:50%");
+	  	divImage.setAttribute("style", "width:100%; height:100px;object-fit: cover");
       // divImage.setAttribute("style", "width:50px");
 	  	divImage.setAttribute("id", imageName);
 	  	divImage.setAttribute("class","figure-img img-fluid rounded");

@@ -68,7 +68,7 @@ function SwitchInterfaceToFR() {
 	$("#tuto-page4").html("<p>Lifemap a été écrit et est maintenu par Damien de Vienne.</p><p>Les serveurs hébergeant Lifemap sont fournis par le Laboratoire de Biométrie et Biologie Évolutive (LBBE). Le soutien technique pour ces serveurs est assuré par Bruno Spataro et Stephane Delmotte.</p>")
 	$("#tuto-page5").html("")
 	//texte expo
-	$("#texteaccrochefds").html("Explorez avec Lifemap les liens de parenté entre toutes les espèces du monde vivant...")
+	$("#texteaccrochefds").html("Explorez avec Lifemap les liens de parenté<br>entre toutes les espèces du monde vivant...")
 	$("#textequickaccess").html("Accédez rapidement à vos espèces préférées !")
 	$("#textequickaccess2").html("Le sol de nos forêts")
   $("#textequickaccess3").html("Le corps humain")
@@ -79,7 +79,8 @@ function SwitchInterfaceToFR() {
 	//qrcode
 	$("#texteqrcode").html("<b>Téléchargez l'application Lifemap</b><br>pour prolonger l'expérience. <br><small>Scannez le QR code ci-dessous pour accéder au Play Store d'Android</small>")
 	//attribution
-	$("#attrib").html("<b>Lifemap</b> pour la fête de la Science (2022) || Auteur : Damien de Vienne, CNRS, Univ-Lyon 1, LBBE | Données : NCBI | Contributeurs : Simon Penel, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
+//	$("#attrib").html("<b>Lifemap</b> pour l'exposition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard || Auteur : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Données : NCBI | Contributeurs : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
+
 }
 function SwitchInterfaceToEN() {
 	//connection
@@ -144,7 +145,7 @@ function SwitchInterfaceToEN() {
 	//qr code
 	$("#texteqrcode").html("<b>Download the Lifemap App</b><br>to keep exploring the Tree of Life! <br><small>Scan the QR code below and download it on the Android Play Store</small>")
 	//attribution
-	$("#attrib").html("<b>Lifemap</b> for the 2022 Science festival || Author: Damien M. de Vienne, CNRS, Univ-Lyon 1, LBBE | Data: NCBI | contributors: Simon Penel, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
+//	$("#attrib").html("<b>Lifemap</b> for the exhibition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard || Author : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Data : NCBI | Contributors : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
 
 }
 function SwitchTreeVersion(treeversion) {
