@@ -67,6 +67,19 @@ function SwitchInterfaceToFR() {
 	$("#tuto-page3").html("<p>Tous les noeuds dans l'arbre sont cliquables. Ceci donne accès à des informations (descriptions et photos) provenant de Wikipedia.</p><p>Des \"trajets\" dans l'arbre peuvent être affichés en cliquant sur la flèche (<i class='fa fa-level-up'></i>) dans le coin inférieur droit et en indiquant le nom d'une espèce de départ et d'une espèce d'arrivée. Ceci permet d'identifier facilement l'ancêtre commun le plus récent (MRCA) entre deux espèces ou groupes d'espèces.</p>")
 	$("#tuto-page4").html("<p>Lifemap a été écrit et est maintenu par Damien de Vienne.</p><p>Les serveurs hébergeant Lifemap sont fournis par le Laboratoire de Biométrie et Biologie Évolutive (LBBE). Le soutien technique pour ces serveurs est assuré par Bruno Spataro et Stephane Delmotte.</p>")
 	$("#tuto-page5").html("")
+	//texte expo
+	$("#texteaccrochefds").html("Explorez avec Lifemap les liens de parenté entre toutes les espèces du monde vivant...")
+	$("#textequickaccess").html("Accédez rapidement à vos espèces préférées !")
+	$("#textequickaccess2").html("Le sol de nos forêts")
+  $("#textequickaccess3").html("Le corps humain")
+  $("#textequickaccess4").html("Dans la cuisine")
+  $("#textequickaccess5").html("L'eau")
+
+
+	//qrcode
+	$("#texteqrcode").html("<b>Téléchargez l'application Lifemap</b><br>pour prolonger l'expérience. <br><small>Scannez le QR code ci-dessous pour accéder au Play Store d'Android</small>")
+	//attribution
+	$("#attrib").html("<b>Lifemap</b> pour la fête de la Science (2022) || Auteur : Damien de Vienne, CNRS, Univ-Lyon 1, LBBE | Données : NCBI | Contributeurs : Simon Penel, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
 }
 function SwitchInterfaceToEN() {
 	//connection
@@ -124,6 +137,14 @@ function SwitchInterfaceToEN() {
 	$("#tuto-page3").html("All the nodes in the tree can be clicked. It displays information (description and picture) concerning the taxa (retrieved from the <i class='fa fa-wikipedia-w'></i>ikipedia page, if any). <br>\"Routes\" in the taxonomy can also be displayed by clicking on <i class='fa fa-level-up'></i> on the bottom right corner and entering a source and a destination. This allows identifying easily the most recent common ancestor (MRCA) of two lineages.")
 	$("#tuto-page4").html("Lifemap was written and is maintained by Damien de Vienne. Servers hosting Lifemap are provided by the Laboratory of Biometry and Evolutionary Biology (LBBE, Lyon, France). Technical support concerning these servers is ensured by Bruno Spataro and Stephane Delmotte.")
 	$("#tuto-page5").html("<span xmlns:dct='http://purl.org/dc/terms/'' property='dct:title'>Lifemap</span> is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-nc/4.0/'>Creative Commons Attribution-NonCommercial 4.0 International License</a>.")
+	//texte expo
+	$("#texteaccrochefds").html("Explore with Lifemap the<br>evolutionary links connecting<br>all species on earth...")
+	$("#textequickaccess").html("Quick access to your favorite species!")
+	$("#textequickaccess2").html("Quick access to your favorite species!")
+	//qr code
+	$("#texteqrcode").html("<b>Download the Lifemap App</b><br>to keep exploring the Tree of Life! <br><small>Scan the QR code below and download it on the Android Play Store</small>")
+	//attribution
+	$("#attrib").html("<b>Lifemap</b> for the 2022 Science festival || Author: Damien M. de Vienne, CNRS, Univ-Lyon 1, LBBE | Data: NCBI | contributors: Simon Penel, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
 
 }
 function SwitchTreeVersion(treeversion) {
@@ -159,10 +180,10 @@ function chooselang(x) {
 		//WE STORE THE NEW COMBINATION OF CHOICES FOR LATER START.
 		savelang = $("#interfacelang > .selectedlang").attr('id')+"+"+$("#treelang > .selectedlang").attr('id')+"+"+$("#wikilang > .selectedlang").attr('id');
 		window.localStorage.setItem("lang", savelang);
-		var largeur = window.innerWidth; // maj de la largeur en cas de modif
-		var hauteur = window.innerHeight; // maj de la largeur en cas de modif
-//		displaySpecies(largeur,hauteur);
-//		cleanBarre();
+		redisplaySpecies_BS("somespeciesafter",0);
+    redisplaySpecies_BS("somespeciesafter3",1);
+    redisplaySpecies_BS("somespeciesafter4",2);
+    redisplaySpecies_BS("somespeciesafter5",3);
 	}
 	else {
 		console.log("rien à faire")

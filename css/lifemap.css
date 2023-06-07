@@ -12,10 +12,30 @@ body,html {
     display: flex;
     align-items: center;
 }
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 .vcenter {
 	display: inline-block;
 	vertical-align: middle;
 	float: none;
+}
+#helpdiv {
+	text-transform: uppercase;
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+/*	font-family: 'Amatic SC', cursive;*/
+	font-family: 'Patrick Hand SC', cursive;
+	color: white;
+	font-size: 14pt;
+/*	font-weight: 700;*/
 }
 #InfoFavo {
 	position: absolute;
@@ -35,12 +55,83 @@ body,html {
     font-size: 10px;
     font-weight: 100;
 }
+.leaflet-container .leaflet-control-attribution {
+	background-color: transparent;
+}
+#back-to-map {
+	color: white;
+    margin-top: -3px;
+    padding-top: 0px;
+    font-size: 26px;
+}
+
+/*MINI DIVS OF THE HELP LAYER*/
+#topleftdiv {
+	position: absolute;
+    left: 515px;
+    top: 213px;
+    width: 300px;
+    height: 90px;
+    /* border: 3px solid green;*/
+}
+#bottomleftdiv {
+    position: absolute;
+    left: 592px;
+    top: 895px;
+    width: 300px;
+    height: 90px;
+}
+#centerdiv {
+	position: absolute;
+    left: 546px;
+    top: 658px;
+    width: 300px;
+    height: 90px;
+}
+#toprightdiv1,#toprightdiv2,#toprightdiv3,#toprightdiv4 {
+    position: absolute;
+    right: 115px;
+    width: 340px;
+    height: 90px;
+}
+#toprightdiv1 {
+	top: 11px;
+}
+#toprightdiv2 {
+	top: 106px;
+}
+#toprightdiv3 {
+	top: 200px;
+}
+#toprightdiv4 {
+	top: 360px;
+}
+
+#centertext.vertical-center  {
+   text-align: right;
+}
+.text1,.text2,.text3,.text4 {
+	text-align: right;
+	width: 100%;
+}
+
+
+
+
+
+
+
 #searchinput {
 	width: 100%;
 	padding-left:11px;
 	padding-right:82px;
 	font-size:18px;
 }
+#searchinput2,#searchinput3 {
+	font-size: 17px;
+}
+
+
 #searchclear {
 	position: absolute;
     right: 50px;
@@ -102,7 +193,7 @@ body,html {
 
 #theMenu {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 12pt;				
+	font-size: 12pt;
 	font-weight: 600;
 }
 .menuentry {
@@ -120,8 +211,32 @@ body,html {
 	cursor: pointer;
 	color: #585858;
 }
+#somespeciesafter {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+    font-size: 9pt;
+    font-weight: 500;
+    text-align: center;
+}
+
+#somespeciesafter3 {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+    font-size: 9pt;
+    font-weight: 500;
+    text-align: center;
+}
+
+#somespeciesafter4 {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+    font-size: 9pt;
+    font-weight: 500;
+    text-align: center;
+}
+
 .routestick {
-	box-shadow:1px 1px 2px 0.2px #656565;				
+	box-shadow:1px 1px 2px 0.2px #656565;
 	background:white;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -146,9 +261,12 @@ body,html {
     text-decoration: underline;
 }
 
-#langchoice {
+#langchoice,#qrcode {
 	font-size: large;
+	font-family: 'Montserrat',sans-serif;
+	font-weight: 400;
 }
+
 .langchoicemodal {
 	font-variant: small-caps;
 	color:#434343;
@@ -166,11 +284,11 @@ p {
 	float: none;
 }
 
-#leftdiv {
+#bottomdiv {
 	position: absolute;
-	height:100%;
-	width:25%;
-	top: 0;
+	height:30%;
+	width:100%;
+	bottom: 0;
 	left: 0;
 	z-index:10;
 	background-image: url("../img/espece-climat_bg_left.png");
@@ -185,31 +303,54 @@ p {
 
 /* The animation of the sliding of barre2*/
 @keyframes slideinout {
-  from {left: 10%;} /*Same as width of leftdiv*/
-  to {left: 25%;} /*Same as width of leftdiv*/
+  from {bottom: 10%;} /*Same as width of leftdiv*/
+  to {bottom: 25%;} /*Same as width of leftdiv*/
 }
 
 #barre2 { /*nouvelle div pour les espèces*/
 	position: absolute;
-	width: 15%;
-	height: 100%;
+	width: 100%;
+	height: 30%;
 	background-color: #c77f8b;
 }
+
+#barre3 { /*nouvelle div pour les espèces*/
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-color: green;
+}
+
+#barre4 { /*nouvelle div pour les espèces*/
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-color: orange;
+}
+
+#barre5 { /*nouvelle div pour les espèces*/
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-color: blue;
+}
+
+
 .barreisclosed {
-	left: 10%; 
+	bottom: 0%;
 /*	animation-name: slideinout;
   	animation-duration: 2s;
   	animation-direction: reverse;
 
 */
-	transition: left 2s;
+	transition: bottom 2s;
 	}
 .barreisopen {
-	left: 25%; 
+	bottom: 25%;
 /*	animation-name: slideinout;
   	animation-duration: 2s;
-*/  	
-	transition: left 2s;
+*/
+	transition: bottom 2s;
 }
 
 
@@ -225,18 +366,90 @@ p {
 /*CODE CONCERNING THE HALF CIRCLE BUTTON*/
 .halfcirclediv {
   height: 100px;
-  width: 50px;
-  border-bottom-right-radius: 100px;
+  width: 80px;
+  /* border-bottom-right-radius: 100px; */
   border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
   background-color: #c77f8b;
   position : absolute;
-  right: 0px;
-  margin-right: -50px;
-  top: 85%;
+  /* right: 0px; */
+    left: 60%;
+  margin-top: -30px;
+  top: -40px;
   text-align: right;
   line-height:100px;
   font-size: 80px;
-  padding-right: 11px;
+  padding-right: 16px;
+  padding-top: -30px;
+  color: black;
+  z-index: 5;
+/*  box-shadow: 0 0 10px black;*/
+}
+
+/*CODE CONCERNING THE HALF CIRCLE BUTTON*/
+.halfcirclediv3 {
+  height: 100px;
+  width: 80px;
+  /* border-bottom-right-radius: 100px; */
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  background-color: green;
+  position : absolute;
+  /* right: 0px; */
+    left: 70%;
+  margin-top: -30px;
+  top: -40px;
+  text-align: right;
+  line-height:100px;
+  font-size: 80px;
+  padding-right: 16px;
+  padding-top: -30px;
+  color: black;
+  z-index: 5;
+/*  box-shadow: 0 0 10px black;*/
+}
+
+/*CODE CONCERNING THE HALF CIRCLE BUTTON*/
+.halfcirclediv4 {
+  height: 100px;
+  width: 80px;
+  /* border-bottom-right-radius: 100px; */
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  background-color: orange;
+  position : absolute;
+  /* right: 0px; */
+    left: 80%;
+  margin-top: -30px;
+  top: -40px;
+  text-align: right;
+  line-height:100px;
+  font-size: 80px;
+  padding-right: 16px;
+  padding-top: -30px;
+  color: black;
+  z-index: 5;
+/*  box-shadow: 0 0 10px black;*/
+}
+
+/*CODE CONCERNING THE HALF CIRCLE BUTTON*/
+.halfcirclediv5 {
+  height: 100px;
+  width: 80px;
+  /* border-bottom-right-radius: 100px; */
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  background-color: blue;
+  position : absolute;
+  /* right: 0px; */
+    left: 90%;
+  margin-top: -30px;
+  top: -40px;
+  text-align: right;
+  line-height:100px;
+  font-size: 80px;
+  padding-right: 16px;
+  padding-top: -30px;
   color: black;
   z-index: 5;
 /*  box-shadow: 0 0 10px black;*/
@@ -246,7 +459,8 @@ p {
 	position: absolute;
 	height: 100px; /*same than the height of halfcirclediv*/
 	width: 100%;
-	top: 85%;/*same than "top" for halfcirclediv*/ 
+	/* top: 85%;/*same than "top" for halfcirclediv*/ */
+  top: -40px;/*same than "top" for halfcirclediv*/
 	right: 0px;
 	padding-right: 30px;
 	padding-left: 50%;
@@ -279,7 +493,7 @@ p {
 #bottomcenter {
 	position: absolute;
 	width: 50px;
-	height: 50px;	
+	height: 50px;
 	margin: 0 auto;
 }
 .btn-circle3 {
@@ -338,7 +552,7 @@ span.sciname b {
 span.scinameItalic {
 	font-style: italic;
 	font-size:16px;
-	color: #505050 ;	
+	color: #505050 ;
 }
 span.scinameItalic b {
 	font-weight: bolder;
@@ -347,13 +561,13 @@ span.scinameItalic b {
 
 span.commonname {
 	color: #505050 ;
-	font-size:13px;	
+	font-size:13px;
 }
 span.rank {
 	text-transform: uppercase;
 	font-weight: bolder;
 	font-size:x-small;
-	color: #989898 ;	
+	color: #989898 ;
 }
 .ui-widget-content a {
     text-decoration: none;
@@ -457,7 +671,7 @@ a {
 	overflow-y: auto;
 	-webkit-border-radius: 0px !important;
 	-moz-border-radius: 0px !important;
-	border-radius: 0px !important; 
+	border-radius: 0px !important;
 }
 
 .modal.left .modal-body,
@@ -513,3 +727,6 @@ ul.share-buttons img{
 
 
 
+#carretstatehalfbut {
+	padding-top: 9px;
+}

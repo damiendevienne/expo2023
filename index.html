@@ -28,11 +28,14 @@
  		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
 		<!--ICONES GOOGLE -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Ajout Simon-->
-<!-- 	    <script type="text/javascript" src="js/utils/speciesfun.js"></script> -->
+	    <script type="text/javascript" src="js/utils/speciesfun.js"></script>
+		<!--Ajout Simon-->
+	    <script type="text/javascript" src="js/utils/timer.js"></script>
 
  		<link rel="stylesheet" href="css/lifemap.css">
 
@@ -55,7 +58,24 @@
 	</head>
 	<body onload="onLoad()" style="background:black;">
 
-		<!-- SMALL DIV POPUP TO SAY ADDED TO FAVORITES DONE-->
+
+
+	<div id="helpdiv" onclick="closehelp();" style="display: none;">
+		<div id="helpdivtextcenter" style="position: absolute; width:100%; height:100%; padding: 25%;"></div>
+		<div style="position: absolute; left:19%; top:19%;"><img src="img/img-help/topleft.png" width='100px'></div>
+		<div style="position: absolute; right:5px; top:5px;"><img src="img/img-help/topright.png" width='100px'></div>
+		<div style="position: absolute; left:371px; bottom:45px;"><img src="img/img-help/bottomleft.png" width='200px'></div>
+		<div style="position: absolute; left:873px; top:629px;"><img src="img/img-help/center.png" width='200px'></div>
+
+		<div id="topleftdiv"><span id="toplefttext" class="vertical-center">Affichez le "chemin" entre deux espèces et identifiez leur ancêtre commun le plus récent</span></div>
+		<div id="bottomleftdiv"><span id="bottomlefttext" class="vertical-center">Accédez à une petite collection d'espèces préféfinies</span></div>
+		<div id="centerdiv"><span id="centertext" class="vertical-center">Cliquez sur les pastilles aux noeuds de l'arbre pour plus d'information sur les espèces et les groupes d'espèces (source : Wikipedia)</span></div>
+		<div id="toprightdiv1"><span id="toprighttext1" class="vertical-center text1">Changez la langue</span></div>
+		<div id="toprightdiv2"><span id="toprighttext2" class="vertical-center text2">Affichez cette page d'aide</span></div>
+		<div id="toprightdiv3"><span id="toprighttext3" class="vertical-center text3">Téléchargez l'application Lifemap (Android)</span></div>
+		<div id="toprightdiv4"><span id="toprighttext4" class="vertical-center text4">Vous êtes perdu.e ? Cliquez ici pour retrouver la vue globale</span></div>
+	</div>
+			<!-- SMALL DIV POPUP TO SAY ADDED TO FAVORITES DONE-->
 <!-- 		<div id="InfoFavo" style="display:none;"><span id="nameofaddedspecies"></span>&nbsp;<span id="removeoradded"></span></div>
  --><!--SWIPER TUTORIAL-->
 <!-- 	<div id = "tuto" class="swiper-container" hidden>
@@ -109,7 +129,7 @@
     </div>
  -->
 <!--SWIPER TUTORIAL-->
-	<div id = "tuto" class="swiper-container" hidden>
+<!-- 	<div id = "tuto" class="swiper-container" hidden>
         <div onclick="closetheswiper(this)" style="position:absolute; top: 30px; right:20px; z-index:10; color:white;"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -161,9 +181,8 @@
             <div class="swiper-slide"></div>
 
         </div>
-        <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
-    </div>
+    </div> -->
 
 <!--SWIPER ABOUT-->
 <!-- 	<div id = "aboutswiper" class="swiper-container" hidden>
@@ -220,19 +239,22 @@
  -->
 
 		<!--MAP-->
-		<div id="leftdiv">
-			<div style="text-align:center; font-size: 25pt; font-weight: 900; padding-top: 30px;">
-				Espèces de climat ! 			
+		<div id="bottomdiv">
+      <div class="bottomleftdivfortext">
+        <span id="textequickaccess"></span>
+      </div>
+			<div style="text-align:center; font-size: 25pt; font-weight: 900; padding-top: 80px;">
+				Lifemap
 			</div>
 			<div style="text-align:center; font-size: 15pt; font-weight: 700; padding-top: 30px;">
-				Explorez avec Lifemap les liens de parenté entre toutes les espèces du monde vivant...
+				<span id="texteaccrochefds"></span>
 			</div>
 			<div id="mainsearch" class="container-fluid" style="background:transparent; margin: 10px 10px 0px 10px; padding-top:30px; z-index:10;">
 				<div class="btn-group" style="width:100%;">
 					<span id="sandwich" class="glyphicon glyphicon-menu-hamburger" style="display:none"></span>
 					<input id="searchinput" type="search" class="form-control" style=" height:50px;" placeholder="Search species, clades, ...">
-					<span id="searchclear" class="material-icons">clear</span> 
-					<span id="route" class="material-icons">shortcut</span> 
+					<span id="searchclear" class="material-icons">clear</span>
+					<span id="route" class="material-icons">shortcut</span>
 					<span id="diamond" class="material-icons">stop</span>
 					<span id="vertical">|</span>
 
@@ -257,11 +279,11 @@
 				</div>
 				<div class="row">&nbsp;</div>
 			</div>
-			<div class="bottomleftdivfortext">
-				Accédez rapidement aux espèces vues dans l'exposition ! 
-			</div>
+			<!-- <div class="bottomleftdivfortext">
+				<span id="textequickaccess"></span>
+			</div> -->
 		</div>
-		<div id="map" style="height:100%; width:75%; z-index:0; float:right;">
+		<div id="map" style="height:75%; width:100%; z-index:0; float:right;">
 <!-- 			<div id="loading" style="position:absolute; left:50%; top:50%;z-index:10000;"><img src="img/loading.gif" height="20px;" width="20px"></div> -->
 		</div>
 		<!--SIMPLE SEARCH DIV-->
@@ -276,11 +298,19 @@
  -->		<!--ITINERARY SEARCH BUTTON-->
 
 		<!--choose language button-->
-		<a id="langchoicebutton" class="btn btn-default btn-circle3" onclick="zoomTo(1);" style="top:2%;" >
+		<a id="langchoicebutton" class="btn btn-default btn-circle3" style="top:20px;" >
 			<i class="fa fa-language"></i>
 		</a>
+		<!--Help button-->
+		<a id="logohelp" class="btn btn-default btn-circle3" style="top:80px;">
+			<i class="fa fa-question-circle"></i>
+		</a>
+		<!--QRcode button-->
+		<a id="logoQRcode" class="btn btn-default btn-circle3" style="top:140px;" onclick="displayQRcode();" >
+			<i class="fa fa-qrcode"></i>
+		</a>
 		<!--Home button-->
-		<a id="logohome" class="btn btn-default btn-circle3" style="top:8%;">
+		<a id="logohome" class="btn btn-default btn-circle3" style="top:240px;">
 			<i class="fa fa-home"></i>
 		</a>
 
@@ -289,35 +319,51 @@
 		<!--Nouvelle barre pour espèces (Damien)-->
 		<div id="barre2" class="barreisclosed">
 			<div class="halfcirclediv">
-				<i id="carretstatehalfbut" class="fa fa-caret-right" aria-hidden="true"></i>			
+				<i id="carretstatehalfbut" class="fa fa-caret-up" aria-hidden="true"></i>
 			</div>
-			<div id="sometextontop" class="row">
-				Accédez rapidement aux espèces vues dans l'exposition ! 
+			<div id="sometextontop" class="row sticky-top">
+				<span id="textequickaccess2"></span>
 			</div>
 			<div id="somespeciesafter">
-				<div class="row" style="padding:10px; margin: 0px;">
-					<div class="col-xs-4">
-						<figure class="figure">
-							<img src="img/speciesImages/Human.jpg" width="100%" class="figure-img img-fluid rounded">
-							<figcaption class="figure-caption"><i>Homo sapiens</i></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-4">
-						<figure class="figure">
-							<img src="img/speciesImages/Human.jpg" width="100%" class="figure-img img-fluid rounded">
-							<figcaption class="figure-caption"><i>Homo sapiens</i></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-4">
-						<figure class="figure">
-							<img src="img/speciesImages/Human.jpg" width="100%" class="figure-img img-fluid rounded">
-							<figcaption class="figure-caption"><i>Homo sapiens</i></figcaption>
-						</figure>
-					</div>
-				</div>
 			</div>
 		</div>
 
+
+    <!--Nouvelle barre pour espèces (Damien)-->
+		<div id="barre3" class="barreisclosed">
+			<div class="halfcirclediv3">
+				<i id="carretstatehalfbut3" class="fa fa-caret-up" aria-hidden="true"></i>
+			</div>
+			<div id="sometextontop" class="row sticky-top">
+				<span id="textequickaccess3"></span>
+			</div>
+			<div id="somespeciesafter3">
+			</div>
+		</div>
+
+    <!--Nouvelle barre pour espèces (Damien)-->
+    <div id="barre4" class="barreisclosed">
+      <div class="halfcirclediv4">
+        <i id="carretstatehalfbut4" class="fa fa-caret-up" aria-hidden="true"></i>
+      </div>
+      <div id="sometextontop" class="row sticky-top">
+        <span id="textequickaccess4"></span>
+      </div>
+      <div id="somespeciesafter4">
+      </div>
+    </div>
+
+    <!--Nouvelle barre pour espèces (Damien)-->
+    <div id="barre5" class="barreisclosed">
+      <div class="halfcirclediv5">
+        <i id="carretstatehalfbut5" class="fa fa-caret-up" aria-hidden="true"></i>
+      </div>
+      <div id="sometextontop" class="row sticky-top">
+        <span id="textequickaccess5"></span>
+      </div>
+      <div id="somespeciesafter5">
+      </div>
+    </div>
 <!-- 		<div class="bottomleft">
 			<img src="img/LMtext1.png" height="20px">
 		</div>
@@ -369,10 +415,10 @@
 						<div class="modal-title">
  							<span id="modaltitle"></span>
 	<!--<span id="clickonfavostar2" class="favo"><i class="fa fa-star-o unsavedfavo" aria-hidden="true"></i></span> -->
-							<div>
+<!-- 							<div>
 								<span id="clickonfavostar" class="label label-default" style="font-size: 8px;"><i class="fa fa-star unsavedfavo" aria-hidden="true" style="font-size: inherit;"></i>&nbsp;<span></span></span>
 							</div>
-						</div>
+ -->						</div>
 						<div id="invisibledata" hidden></div> <!-- Used for favorites...-->
 					</div>
 					<div class="modal-body">
@@ -452,7 +498,7 @@
 							<div class='row menuentry'>
 								<div class="col-xs-2"></div>
 								<div class="col-xs-10">
-									<span id="ChoiceExplo"><i class='fa fa-square-o fa-fw' style="font-size:15px;"></i> <span id="flybutton"></span></span>
+									<span id="ChoiceExplo"><i class='fa fa-check-square-o fa-fw' style="font-size:15px;"></i> <span id="flybutton"></span></span>
 									<div id="flytext" style='color:grey; font-size: 10px; padding: 10px;'></div>
 								</div>
 							</div>
@@ -464,6 +510,34 @@
 				</div>
 			</div>
 		</div>
+
+
+		<!--QRCODE MODAL-->
+		<div id="qrcode" class="modal fade" role="dialog">
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header text-center">
+<!-- 			<p style="color:grey;"><i class='fa fa-qrcode fa-lg fa-fw'></i></p> -->
+			<span id="texteqrcode"></span>
+		</div>
+		<div class="modal-body text-center">
+		<img src="img/qr-code-lifemap.svg" width="300px">
+			<div class="row langchoicemodal">
+				<div class="col-xs-4">
+				</div>
+				<div class="col-xs-4">
+				</div>
+				<div class="col-xs-4">
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button id="closelangchoice" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+</div>
+		</div>
+
 
 		<!--LANGUAGE CHOICE MODAL-->
 		<div id="langchoice" class="modal fade" role="dialog">
@@ -534,6 +608,7 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Include leaflet -->
+
 		<script src="js/leaflet/leaflet.js"></script>
 		<!--JQUERY UI -->
 		<script src="js/searchbar/jquery-ui.js"></script>
