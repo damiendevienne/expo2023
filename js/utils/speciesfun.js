@@ -54,14 +54,21 @@ var police_size = 10;
 				];
 
 /* Le corps humain*/
-    var arraySpecies3 = [];
-/*    		 [9606,    ["Human","Humain"]],
-				 [10090,   ["House mouse","Souris grise"]],
-				 [59546,   ["Topi","Topi du Serengeti"]],
-				 [85517,   ["Desert warthog ","Phacochère commun"]],
-				 [9927,    ["Blue wildebeest ","Gnou bleu"]],
-     ];*/
-
+    var arraySpecies3 = [
+   		 [9606,    ["Human","Humain"]],
+   		 [582,    ["Morganella morganii","Morganella morganii"]],
+   		 [481310, ["Demodex folliculorum","Demodex folliculorum"]],
+   		 [239935, ["Akkermansia muciniphila","Akkermansia muciniphila"]],
+   		 [2173,   ["Methanobrevibacter smithii","Methanobrevibacter smithii"]],
+   		 [1358,   ["Lactococcis lactis","Lactococcis lactis"]],
+   		 [1681,   ["Lactobacillus bifidus","Lactobacillus bifidus"]],
+   		 [1282,   ["Staphylococcus epidermidis","Staphylococcus epidermidis"]],
+   		 [4932,   ["Saccharomyce cerevisiae","Saccharomyce cerevisiae"]],
+   		 [666,    ["Vibrio cholerae","Vibrio cholerae"]],
+    	 [632,    ["Yersinia pestis","Yersinia pestis"]],     
+    	 [1280,  ["Staphylococcus aureus","Staphylococcus aureus"]],       	 		   		 
+    	 [562,   ["Escherichia coli","Escherichia coli"]]  
+   	];
 
     /*Cuisine*/
     var arraySpecies4 = [
@@ -93,8 +100,6 @@ var police_size = 10;
       	[92068,   ["Hydracarina","Hydracarien"]]    
 
       ];
-
-
 
 // Cree une map a partir du tableau
 // On utilise une map pour preserver
