@@ -32,10 +32,28 @@ var police_size = 10;
 
 /*  Le sol de nos forets */
 		var arraySpecies2 = [
-				 [31869,   ["Aye-Aye","Aye-Aye"]],
+				[55518,   ["Magnetospirillum gryphiswaldense","Magnetospirillum gryphiswaldense"]],
+				[5791,   ["Physarum polycephalum","Blob"]],
+				[5544,   ["Trichoderma harzianum","Trichoderma harzianum"]],
+				[1299,   ["Deinococcus radiodurans","Deinococcus radiodurans"]],									 
+				[54298,   ["Chroococcidiopsis","Chroococcidiopsis"]],				
+				[549,   ["Pantoea agglomerans","Pantoea agglomerans"]],
+				[318532,   ["Hyaslosphenia papilio","Hyaslosphenia papilio"]],														
+				[5580,   ["Aureobasidium pullulans","Aureobasidium pullulans"]],	
+				[384,   ["Rhizobium leguminorasum","Rhizobium leguminorasum"]],	
+				[358,   ["Agrobacterium tumefaciens","Agrobacterium tumefaciens"]],	
+				[30001,   ["Collembola","Collemboles"]],	
+				[66551,   ["Oribatida","Acarien oribate"]],	
+				[1723665,   ["Gamasina","Acarien gamaside"]],	
+				[13347,   ["Armadillidium vulgare","Cloporte commun"]],	
+				[6398,   ["Lumbricus terrestris","Lombric"]],	
+				[6231,   ["Nematoda","Nématode"]],		
+				[258706,   ["Formica rufa","Fourmi rousse"]],		
+				[51799,   ["Pseudoscorpiones","Pseudo-scorpion"]],		
+				[7552,   ["Lithobius forficatus","Lithobie"]]		
 				];
-		
 
+/* Le corps humain*/
     var arraySpecies3 = [];
 /*    		 [9606,    ["Human","Humain"]],
 				 [10090,   ["House mouse","Souris grise"]],
