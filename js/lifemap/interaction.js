@@ -143,6 +143,9 @@
 				var caretstate = document.getElementById("carretstatehalfbut");
 				var spdivstate = document.getElementById("barre2");
 				if (spdivstate.className==="barreisopen") {
+					$("#barre3").show();
+					$("#barre4").show();				
+					$("#barre5").show(); 
 					caretstate.className = "fa fa-caret-up";
 					spdivstate.className = "barreisclosed";
 					$(".halfcirclediv").css("padding-right","16px");
@@ -155,6 +158,9 @@
 				var caretstate = document.getElementById("carretstatehalfbut");
 				var spdivstate = document.getElementById("barre2");
 				if (spdivstate.className==="barreisclosed") {
+					$("#barre3").hide();
+					$("#barre4").hide();				
+					$("#barre5").hide();
 					caretstate.className = "fa fa-caret-down";
 					spdivstate.className = "barreisopen";
 					$(".halfcirclediv").css("padding-right","16px");
@@ -167,8 +173,11 @@
 
       function closebarre3() {
         var caretstate = document.getElementById("carretstatehalfbut3");
-        var spdivstate = document.getElementById("barre3");
+        var spdivstate = document.getElementById("barre3");      
         if (spdivstate.className==="barreisopen") {
+        	$("#barre2").show();
+					$("#barre4").show();				
+					$("#barre5").show(); 
           caretstate.className = "fa fa-caret-up";
           spdivstate.className = "barreisclosed";
           $(".halfcirclediv3").css("padding-right","16px");
@@ -181,6 +190,9 @@
         var caretstate = document.getElementById("carretstatehalfbut3");
         var spdivstate = document.getElementById("barre3");
         if (spdivstate.className==="barreisclosed") {
+        	$("#barre2").hide();
+					$("#barre4").hide();				
+					$("#barre5").hide();
           caretstate.className = "fa fa-caret-down";
           spdivstate.className = "barreisopen";
           $(".halfcirclediv3").css("padding-right","16px");
@@ -194,6 +206,9 @@
         var caretstate = document.getElementById("carretstatehalfbut4");
         var spdivstate = document.getElementById("barre4");
         if (spdivstate.className==="barreisopen") {
+        	$("#barre2").show();
+					$("#barre3").show();				
+					$("#barre5").show(); 
           caretstate.className = "fa fa-caret-up";
           spdivstate.className = "barreisclosed";
           $(".halfcirclediv4").css("padding-right","16px");
@@ -206,6 +221,9 @@
         var caretstate = document.getElementById("carretstatehalfbut4");
         var spdivstate = document.getElementById("barre4");
         if (spdivstate.className==="barreisclosed") {
+        	$("#barre2").hide();
+					$("#barre3").hide();				
+					$("#barre5").hide();
           caretstate.className = "fa fa-caret-down";
           spdivstate.className = "barreisopen";
           $(".halfcirclediv4").css("padding-right","16px");
@@ -219,6 +237,9 @@
         var caretstate = document.getElementById("carretstatehalfbut5");
         var spdivstate = document.getElementById("barre5");
         if (spdivstate.className==="barreisopen") {
+        	$("#barre2").show();
+					$("#barre3").show();				
+					$("#barre4").show(); 
           caretstate.className = "fa fa-caret-up";
           spdivstate.className = "barreisclosed";
           $(".halfcirclediv5").css("padding-right","16px");
@@ -231,6 +252,9 @@
         var caretstate = document.getElementById("carretstatehalfbut5");
         var spdivstate = document.getElementById("barre5");
         if (spdivstate.className==="barreisclosed") {
+        	$("#barre2").hide();
+					$("#barre3").hide();				
+					$("#barre4").hide();
           caretstate.className = "fa fa-caret-down";
           spdivstate.className = "barreisopen";
           $(".halfcirclediv5").css("padding-right","16px");
