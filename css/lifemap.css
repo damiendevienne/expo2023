@@ -291,7 +291,8 @@ p {
 	bottom: 0;
 	left: 0;
 	z-index:10;
-	background-image: url("../img/espece-climat_bg_left.png");
+/*	background-image: url("../img/espece-climat_bg_left.png");*/
+	background-image: url("../img/leftimgtest.png");
 	background-size: cover;
 	font-family: 'Montserrat', sans-serif;
 	color:white;
@@ -315,7 +316,7 @@ p {
 	bottom:0px;
 /*	overflow-y:scroll ;
 */	
-    background-color: #345439;
+    background-color: #e0bf10;	
 
 }
 
@@ -497,13 +498,13 @@ box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 	border-radius: 50%;
 	position:absolute;
 	margin: auto;
-	background: #345439;
+	background: #e0bf10;
 	color:white;
 	right:1%;
 	box-shadow: 0 0 10px black;
 }
 #logohome:hover {
-	background-color: #c77f8b;
+	background-color: #e0bf10;
 	color: white;
 	border-color: white;
 }
