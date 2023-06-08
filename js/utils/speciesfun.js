@@ -32,72 +32,72 @@ var police_size = 10;
 
 /*  Le sol de nos forets */
 		var arraySpecies2 = [
-				[55518,   ["Magnetospirillum gryphiswaldense","Magnetospirillum gryphiswaldense"]],
-				[5791,   ["Physarum polycephalum","Blob"]],
-				[5544,   ["Trichoderma harzianum","Trichoderma harzianum"]],
-				[1299,   ["Deinococcus radiodurans","Deinococcus radiodurans"]],									 
-				[54298,   ["Chroococcidiopsis","Chroococcidiopsis"]],				
-				[549,   ["Pantoea agglomerans","Pantoea agglomerans"]],
-				[318532,   ["Hyaslosphenia papilio","Hyaslosphenia papilio"]],														
-				[5580,   ["Aureobasidium pullulans","Aureobasidium pullulans"]],	
-				[384,   ["Rhizobium leguminorasum","Rhizobium leguminorasum"]],	
-				[358,   ["Agrobacterium tumefaciens","Agrobacterium tumefaciens"]],	
-				[30001,   ["Collembola","Collemboles"]],	
-				[66551,   ["Oribatida","Acarien oribate"]],	
-				[1723665,   ["Gamasina","Acarien gamaside"]],	
-				[13347,   ["Armadillidium vulgare","Cloporte commun"]],	
-				[6398,   ["Lumbricus terrestris","Lombric"]],	
-				[6231,   ["Nematoda","Nématode"]],		
-				[258706,   ["Formica rufa","Fourmi rousse"]],		
-				[51799,   ["Pseudoscorpiones","Pseudo-scorpion"]],		
-				[7552,   ["Lithobius forficatus","Lithobie"]]		
+				[55518,   ["<i>Magnetospirillum gryphiswaldense","<i>Magnetospirillum gryphiswaldense"]],
+				[5791,   ["<i>Physarum polycephalum","Blob"]],
+				[5544,   ["<i>Trichoderma harzianum","<i>Trichoderma harzianum"]],
+				[1299,   ["<i>Deinococcus radiodurans","<i>Deinococcus radiodurans"]],									 
+				[54298,   ["<i>Chroococcidiopsis","<i>Chroococcidiopsis"]],				
+				[549,   ["<i>Pantoea agglomerans","<i>Pantoea agglomerans"]],
+				[318532,   ["<i>Hyaslosphenia papilio","<i>Hyaslosphenia papilio"]],														
+				[5580,   ["<i>Aureobasidium pullulans","<i>Aureobasidium pullulans"]],	
+				[384,   ["<i>Rhizobium leguminorasum","<i>Rhizobium leguminorasum"]],	
+				[358,   ["<i>Agrobacterium tumefaciens","<i>Agrobacterium tumefaciens"]],	
+				[30001,   ["<i>Collembola","<i>Collemboles"]],	
+				[66551,   ["<i>Oribatida","Acarien oribate"]],	
+				[1723665,   ["<i>Gamasina","Acarien gamaside"]],	
+				[13347,   ["<i>Armadillidium vulgare","Cloporte commun"]],	
+				[6398,   ["<i>Lumbricus terrestris","Lombric"]],	
+				[6231,   ["<i>Nematoda","Nématode"]],		
+				[258706,   ["<i>Formica rufa","Fourmi rousse"]],		
+				[51799,   ["<i>Pseudoscorpiones","Pseudo-scorpion"]],		
+				[7552,   ["<i>Lithobius forficatus","Lithobie"]]		
 				];
 
 /* Le corps humain*/
     var arraySpecies3 = [
-   		 [9606,    ["Human","Humain"]],
-   		 [582,    ["Morganella morganii","Morganella morganii"]],
-   		 [481310, ["Demodex folliculorum","Demodex folliculorum"]],
-   		 [239935, ["Akkermansia muciniphila","Akkermansia muciniphila"]],
-   		 [2173,   ["Methanobrevibacter smithii","Methanobrevibacter smithii"]],
-   		 [1358,   ["Lactococcis lactis","Lactococcis lactis"]],
-   		 [1681,   ["Lactobacillus bifidus","Lactobacillus bifidus"]],
-   		 [1282,   ["Staphylococcus epidermidis","Staphylococcus epidermidis"]],
-   		 [4932,   ["Saccharomyce cerevisiae","Saccharomyce cerevisiae"]],
-   		 [666,    ["Vibrio cholerae","Vibrio cholerae"]],
-    	 [632,    ["Yersinia pestis","Yersinia pestis"]],     
-    	 [1280,  ["Staphylococcus aureus","Staphylococcus aureus"]],       	 		   		 
-    	 [562,   ["Escherichia coli","Escherichia coli"]]  
+   		 [9606,    ["<i>Human</i>","Humain"]],
+   		 [582,    ["<i>Morganella morganii</i>","<i>Morganella morganii</i>"]],
+   		 [481310, ["<i>Demodex folliculorum</i>","<i>Demodex folliculorum</i>"]],
+   		 [239935, ["<i>Akkermansia muciniphila</i>","<i>Akkermansia muciniphila</i>"]],
+   		 [2173,   ["<i>Methanobrevibacter smithii</i>","<i>Methanobrevibacter smithii</i>"]],
+   		 [1358,   ["<i>Lactococcis lactis</i>","<i>Lactococcis lactis</i>"]],
+   		 [1681,   ["<i>Lactobacillus bifidus</i>","<i>Lactobacillus bifidus</i>"]],
+   		 [1282,   ["<i>Staphylococcus epidermidis</i>","<i>Staphylococcus epidermidis</i>"]],
+   		 [4932,   ["<i>Saccharomyce cerevisiae</i>","<i>Saccharomyce cerevisiae</i>"]],
+   		 [666,    ["<i>Vibrio cholerae</i>","<i>Vibrio cholerae</i>"]],
+    	 [632,    ["<i>Yersinia pestis</i>","<i>Yersinia pestis</i>"]],     
+    	 [1280,  ["<i>Staphylococcus aureus</i>","<i>Staphylococcus aureus</i>"]],       	 		   		 
+    	 [562,   ["<i>Escherichia coli</i>","<i>Escherichia coli</i>"]]  
    	];
 
     /*Cuisine*/
     var arraySpecies4 = [
-  			 [4932,    ["Saccharomyces cerevisia","Saccharomyces cerevisia"]],
-      	 [1585,    ["Lactobacillus bulgaricus","Lactobacillus bulgaricus"]],
-      	 [1301,    ["Streptococcus","Streptococcus"]],
-      	 [1357,    ["Lactococcus","Lactococcus"]],
-      	 [5082,    ["Penicillium roqueforti","Penicillium roqueforti"]],
-      	 [1247,    ["Oenococcus oeni","Oenococcus oeni"]],
-      	 [435,    ["Acetobacter aceti","Acetobacter aceti"]],
-      	 [66546,    ["Acarus siro","Acarien du fromage"]],
-      	 [6956,    ["Dermatophagoides pteronyssinus","Acarien des poussières"]]
+  			 [4932,    ["<i>Saccharomyces cerevisia</i>","<i>Saccharomyces cerevisia</i>"]],
+      	 [1585,    ["<i>Lactobacillus bulgaricus</i>","<i>Lactobacillus bulgaricus</i>"]],
+      	 [1301,    ["<i>Streptococcus</i>","<i>Streptococcus</i>"]],
+      	 [1357,    ["<i>Lactococcus</i>","<i>Lactococcus</i>"]],
+      	 [5082,    ["<i>Penicillium roqueforti</i>","<i>Penicillium roqueforti</i>"]],
+      	 [1247,    ["<i>Oenococcus oeni</i>","<i>Oenococcus oeni</i>"]],
+      	 [435,    ["<i>Acetobacter aceti</i>","<i>Acetobacter aceti</i>"]],
+      	 [66546,    ["<i>Acarus siro</i>","Acarien du fromage"]],
+      	 [6956,    ["<i>Dermatophagoides pteronyssinus</i>","Acarien des poussières"]]
     	];
 
 
     /* L'eau */
      var arraySpecies5 = [
-     		[1218,   ["Prochlorococcus","<i>Prochlorococcus</i>"]],
-     		[198251, ["Candidatus Pelagibacter","Candidatus Pelagibacter"]],
-     		[70863,  ["Shewanella oneidensis","Shewanella oneidensis"]],
-     		[6083,   ["Hydra","Hydre"]],
-     		[1003064,   ["Isthmia enervis","Diatomée"]],
-     		[2951,   ["Symbiodinium microadriaticum","Zooxanthelle"]],
-     		[42241,  ["Tardigrada","Tardigrade"]],
-      	[6670,   ["Ostracoda","Ostracode"]],    		
-      	[6665,   ["Cladocera","Cladocère"]],    	
-      	[5884,   ["Paramecium","Paramécie"]],   
-      	[10190,   ["Rotifera","Rotifère"]],         	
-      	[92068,   ["Hydracarina","Hydracarien"]]    
+     		[1218,   ["<i>Prochlorococcus</i>","<i>Prochlorococcus</i>"]],
+     		[198251, ["<i>Candidatus Pelagibacter</i>","<i>Candidatus Pelagibacter"]],
+     		[70863,  ["<i>Shewanella oneidensis</i>","<i>Shewanella oneidensis"]],
+     		[6083,   ["<i>Hydra</i>","Hydre"]],
+     		[1003064,   ["<i>Isthmia enervis</i>","Diatomée"]],
+     		[2951,   ["<i>Symbiodinium microadriaticum</i>","Zooxanthelle"]],
+     		[42241,  ["<i>Tardigrada</i>","Tardigrade"]],
+      	[6670,   ["<i>Ostracoda</i>","Ostracode"]],    		
+      	[6665,   ["<i>Cladocera</i>","Cladocère"]],    	
+      	[5884,   ["<i>Paramecium</i>","Paramécie"]],   
+      	[10190,   ["<i>Rotifera</i>","Rotifère"]],         	
+      	[92068,   ["<i>Hydracarina</i>","Hydracarien"]]    
 
       ];
 
