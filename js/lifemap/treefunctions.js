@@ -116,7 +116,7 @@ jQuery.ui.autocomplete.prototype._resizeMenu = function () {
 function loadSearchFunction() {
 	$(function() {
 		var str;
-		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?&suggest.count=5&suggest.q=";
+		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?&suggest.count=4&suggest.q=";
 		var URL_PREFIX_FINAL = "https://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput").autocomplete({
@@ -225,7 +225,7 @@ function loadSearchFunction() {
 	});
 	$(function() {
 		var str;
-		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=5&suggest.q=";
+		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=4&suggest.q=";
 		var URL_PREFIX_FINAL = "https://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput2").autocomplete({
@@ -298,7 +298,7 @@ function loadSearchFunction() {
 	});
 	$(function() {
 		var str;
-		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=5&suggest.q=";
+		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=4&suggest.q=";
 		var URL_PREFIX_FINAL = "https://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput3").autocomplete({
