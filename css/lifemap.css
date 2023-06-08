@@ -315,6 +315,16 @@ p {
 	overflow-y:scroll ;
 
 }
+.thebarremenu {
+	position: absolute;
+	width: 55%;
+	height: 10%;
+	right:0px;
+	overflow-y:scroll ;
+	bottom:25%;
+
+}
+
 #barre2 { /*nouvelle div pour les espèces*/
 	background-color: #c77f8b;
 }
