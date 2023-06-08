@@ -312,6 +312,7 @@ p {
 	width: 55%;
 	height: 32%;
 	right:0px;
+	overflow-y:scroll ;
 
 }
 #barre2 { /*nouvelle div pour les espèces*/
