@@ -60,7 +60,7 @@ var police_size = 10;
    		 [481310, ["<i>Demodex folliculorum</i>","<i>Demodex folliculorum</i>"]],
    		 [239935, ["<i>Akkermansia muciniphila</i>","<i>Akkermansia muciniphila</i>"]],
    		 [2173,   ["<i>Methanobrevibacter smithii</i>","<i>Methanobrevibacter smithii</i>"]],
-   		 [1358,   ["<i>Lactococcis lactis</i>","<i>Lactococcis lactis</i>"]],
+   		 [1358,   ["<i>Lactococcus lactis</i>","<i>Lactococcus lactis</i>"]],
    		 [1681,   ["<i>Lactobacillus bifidus</i>","<i>Lactobacillus bifidus</i>"]],
    		 [1282,   ["<i>Staphylococcus epidermidis</i>","<i>Staphylococcus epidermidis</i>"]],
    		 [4932,   ["<i>Saccharomyce cerevisiae</i>","<i>Saccharomyce cerevisiae</i>"]],
@@ -153,7 +153,7 @@ function displaySpecies_BS(somespeciesafter,d) {
   var nbspec = data.length;
   // nbspec= 8;
 	i = 0;
-	for (line = 0; line <= 3; line ++)  {
+	for (line = 0; line <= 4; line ++)  {
 		var divLine = document.createElement("div");
 		divLine.setAttribute("class","row");
 		divLine.setAttribute("style", "padding:10px; margin: 0px");
@@ -171,7 +171,7 @@ function displaySpecies_BS(somespeciesafter,d) {
 	  	divImage.setAttribute("style", "width:100%; height:100px;object-fit: cover");
       // divImage.setAttribute("style", "width:50px");
 	  	divImage.setAttribute("id", imageName);
-	  	divImage.setAttribute("class","figure-img img-fluid rounded");
+/*	  	divImage.setAttribute("class","figure-img img-fluid rounded");*/
 	  	divImage.setAttribute("data-micron","tada");
 	  	divImage.onclick = selectThis;
 			var caption = document.createElement("figcaption");
