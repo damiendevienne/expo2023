@@ -314,7 +314,8 @@ p {
 	right:0px;
 	bottom:0px;
 /*	overflow-y:scroll ;
-*/	background-color: #ffee00a6;
+*/	
+    background-color: #345439;
 
 }
 
@@ -340,7 +341,8 @@ p {
 .lesbellesimages {
 /*	border:2px solid black;
 	border-radius :25px;
-*/	box-shadow: 0 0 10px black;
+*/	
+box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 .thebarremenu {
 	position: absolute;
@@ -495,7 +497,7 @@ p {
 	border-radius: 50%;
 	position:absolute;
 	margin: auto;
-	background: #c77f8b;
+	background: #345439;
 	color:white;
 	right:1%;
 	box-shadow: 0 0 10px black;
