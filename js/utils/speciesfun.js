@@ -298,8 +298,8 @@ function selectThis() {
   // micron.getEle("."+this.id).interaction("bounce");
   // this.interaction("bounce");
   var taxidok = this.id;
-  var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.q=";
-  var URL_PREFIX_FINAL = "http://"+ServerAddress+"/solr/taxo/select?q=taxid:";
+  var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.q=";
+  var URL_PREFIX_FINAL = "https://"+ServerAddress+"/solr/taxo/select?q=taxid:";
   var URL_SUFFIX = "&wt=json";
   var URL = URL_PREFIX_FINAL + taxidok + URL_SUFFIX;
   var largeur = window.innerWidth; // maj de la largeur en cas de modif
