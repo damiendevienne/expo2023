@@ -116,7 +116,7 @@ jQuery.ui.autocomplete.prototype._resizeMenu = function () {
 function loadSearchFunction() {
 	$(function() {
 		var str;
-		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?&suggest.count=3&suggest.q=";
+		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?&suggest.count=5&suggest.q=";
 		var URL_PREFIX_FINAL = "http://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput").autocomplete({
@@ -161,10 +161,10 @@ function loadSearchFunction() {
 								var renderval = spname + commonname;
 								console.log(issp)
 								if ((issp==="species")||(issp==="subspecies")||(issp==="espèce")||(issp==="sousespèce")) {
-									labOK = "<div style='border-bottom:1px solid #989898; padding: 20px;'><span class=\"scinameItalic\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\" >" + str[2] + "</span></div>";
+									labOK = "<div style='border-bottom:1px solid #989898; padding: 8px;'><span class=\"scinameItalic\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\" >" + str[2] + "</span></div>";
 								}
 								else {
-									labOK = "<div style='border-bottom:1px solid #989898; padding: 20px;'><span class=\"sciname\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\">" + str[2] + "</span></div>";
+									labOK = "<div style='border-bottom:1px solid #989898; padding: 8px;'><span class=\"sciname\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\">" + str[2] + "</span></div>";
 								}
 								return {
 									label : labOK,
@@ -225,7 +225,7 @@ function loadSearchFunction() {
 	});
 	$(function() {
 		var str;
-		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=3&suggest.q=";
+		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=5&suggest.q=";
 		var URL_PREFIX_FINAL = "http://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput2").autocomplete({
@@ -264,10 +264,10 @@ function loadSearchFunction() {
 							commonname=commonname.replace(/<\/b>/g,"");
 							var renderval = spname + commonname;
 							if ((issp==="species")||(issp==="subspecies")||(issp==="espèce")||(issp==="sousespèce")) {
-								labOK = "<div style='border-bottom:1px solid #989898; padding: 20px;'><span class=\"scinameItalic\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\" >" + str[2] + "</span></div>";
+								labOK = "<div style='border-bottom:1px solid #989898; padding: 8px;'><span class=\"scinameItalic\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\" >" + str[2] + "</span></div>";
 							}
 							else {
-								labOK = "<div style='border-bottom:1px solid #989898; padding: 20px;'><span class=\"sciname\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\">" + str[2] + "</span></div>";
+								labOK = "<div style='border-bottom:1px solid #989898; padding: 8px;'><span class=\"sciname\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\">" + str[2] + "</span></div>";
 							}
 							return {
 								label : labOK,
@@ -298,7 +298,7 @@ function loadSearchFunction() {
 	});
 	$(function() {
 		var str;
-		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=3&suggest.q=";
+		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=5&suggest.q=";
 		var URL_PREFIX_FINAL = "http://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput3").autocomplete({
@@ -337,10 +337,10 @@ function loadSearchFunction() {
 							commonname=commonname.replace(/<\/b>/g,"");
 							var renderval = spname + commonname;
 							if ((issp==="species")||(issp==="subspecies")||(issp==="espèce")||(issp==="sousespèce")) {
-								labOK = "<div style='border-bottom:1px solid #989898; padding: 20px;'><span class=\"scinameItalic\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\" >" + str[2] + "</span></div>";
+								labOK = "<div style='border-bottom:1px solid #989898; padding: 8px;'><span class=\"scinameItalic\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\" >" + str[2] + "</span></div>";
 							}
 							else {
-								labOK = "<div style='border-bottom:1px solid #989898; padding: 20px;'><span class=\"sciname\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\">" + str[2] + "</span></div>";
+								labOK = "<div style='border-bottom:1px solid #989898; padding: 8px;'><span class=\"sciname\">" + str[0] + "</span><span class=\"commonname\">" + str[1] + "</span><br><span class=\"rank\">" + str[2] + "</span></div>";
 							}
 							return {
 								label : labOK,

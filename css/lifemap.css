@@ -353,9 +353,10 @@ p {
 	text-align: center;
 	font-weight: 600;
 	font-size: 14pt;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "headtwo", sans-serif;
 	color:white;
 	padding: 30px;
+	margin:0px;
 }
 
 /*CODE CONCERNING THE HALF CIRCLE BUTTON*/
