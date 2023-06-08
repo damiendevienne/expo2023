@@ -335,6 +335,12 @@ p {
 
 }
 
+
+.lesbellesimages {
+	border:2px solid black;
+	border-radius :25px;
+	box-shadow: 0 0 10px black;
+}
 .thebarremenu {
 	position: absolute;
 	width: 55%;

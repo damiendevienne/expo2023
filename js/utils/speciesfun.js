@@ -172,6 +172,7 @@ function displaySpecies_BS(somespeciesafter,d) {
       // divImage.setAttribute("style", "width:50px");
 	  	divImage.setAttribute("id", imageName);
 /*	  	divImage.setAttribute("class","figure-img img-fluid rounded");*/
+			divImage.setAttribute("class","lesbellesimages");
 	  	divImage.setAttribute("data-micron","tada");
 	  	divImage.onclick = selectThis;
 			var caption = document.createElement("figcaption");
