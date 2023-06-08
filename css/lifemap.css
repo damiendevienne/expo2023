@@ -211,28 +211,12 @@ body,html {
 	cursor: pointer;
 	color: #585858;
 }
-#somespeciesafter {
+.somespeciesthere {
 	font-family: 'Montserrat', sans-serif;
 	color: white;
     font-size: 9pt;
     font-weight: 500;
-    text-align: center;
-}
-
-#somespeciesafter3 {
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-    font-size: 9pt;
-    font-weight: 500;
-    text-align: center;
-}
-
-#somespeciesafter4 {
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-    font-size: 9pt;
-    font-weight: 500;
-    text-align: center;
+    text-align: center;	
 }
 
 .routestick {
