@@ -34,7 +34,7 @@ function getRoute(a1, a2) {
    var zoomTo = function(taxid) {
 //	$("#route-details").hide();
 	$("#theMenu").modal("hide");
- 		var url = 'http://'+ServerAddress+'/solr/taxo/select?q=taxid:"'+taxid+'"&wt=json';
+ 		var url = 'https://'+ServerAddress+'/solr/taxo/select?q=taxid:"'+taxid+'"&wt=json';
 	if (taxid === 1) {
 		if ($('#ChoiceExplo').find('i').attr('class').match("fa-check-square-o")===null) {
 			map.setView(L.latLng([-5,0]),5);
@@ -74,7 +74,7 @@ function CreatePopUps() {
 	var lon2 = bb._northEast.lng;
 	var lat1 = bb._southWest.lat;
 	var lat2 = bb._northEast.lat;
-	var URL2 = "http://"+ServerAddress+"/solr/taxo/select?q=*:*&fq=zoom:[0 TO " + z + "]&fq=lat:[" + lat1 + " TO " + lat2 + "]&fq=lon:[" + lon1 + " TO " + lon2 + "]&wt=json&rows=1000";
+	var URL2 = "https://"+ServerAddress+"/solr/taxo/select?q=*:*&fq=zoom:[0 TO " + z + "]&fq=lat:[" + lat1 + " TO " + lat2 + "]&fq=lon:[" + lon1 + " TO " + lon2 + "]&wt=json&rows=1000";
 	$.ajax({
 		url : URL2,
 		success : function(data) {
@@ -116,8 +116,8 @@ jQuery.ui.autocomplete.prototype._resizeMenu = function () {
 function loadSearchFunction() {
 	$(function() {
 		var str;
-		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?&suggest.count=5&suggest.q=";
-		var URL_PREFIX_FINAL = "http://"+ServerAddress+"/solr/taxo/select?q=taxid:";
+		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?&suggest.count=5&suggest.q=";
+		var URL_PREFIX_FINAL = "https://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput").autocomplete({
 			//ONLY FOR IOS:
@@ -225,8 +225,8 @@ function loadSearchFunction() {
 	});
 	$(function() {
 		var str;
-		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=5&suggest.q=";
-		var URL_PREFIX_FINAL = "http://"+ServerAddress+"/solr/taxo/select?q=taxid:";
+		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=5&suggest.q=";
+		var URL_PREFIX_FINAL = "https://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput2").autocomplete({
 			source : function(request, response) {
@@ -298,8 +298,8 @@ function loadSearchFunction() {
 	});
 	$(function() {
 		var str;
-		var URL_PREFIX = "http://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=5&suggest.q=";
-		var URL_PREFIX_FINAL = "http://"+ServerAddress+"/solr/taxo/select?q=taxid:";
+		var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.count=5&suggest.q=";
+		var URL_PREFIX_FINAL = "https://"+ServerAddress+"/solr/taxo/select?q=taxid:";
 		var URL_SUFFIX = "&wt=json";
 		$("#searchinput3").autocomplete({
 			source : function(request, response) {
@@ -391,7 +391,7 @@ function mrcaroute() {
 	//get infos
 	taxidFrom = taxidFrom.replace(/\s+/g, '');
 	taxidTo = taxidTo.replace(/\s+/g, '');
-	var url = 'http://'+ServerAddress+'/solr/addi/select?q=*:*&fq=taxid:('+taxidFrom+' '+taxidTo+')&wt=json';
+	var url = 'https://'+ServerAddress+'/solr/addi/select?q=*:*&fq=taxid:('+taxidFrom+' '+taxidTo+')&wt=json';
 	$.ajax({
 	    url : url,
 	    success : function(data) {
@@ -412,7 +412,7 @@ function mrcaroute() {
 			}
 			var mrca = getMrca(asc1,asc2);
 			routeq = route.toString().replace(/,/g,' ');
-			url2 = 'http://'+ServerAddress+'/solr/taxo/select?q=*:*&fq=taxid:(' + routeq + ')&wt=json&rows=10000';
+			url2 = 'https://'+ServerAddress+'/solr/taxo/select?q=*:*&fq=taxid:(' + routeq + ')&wt=json&rows=10000';
 			$.ajax({
 			    url : url2,
 			    success: function(data2) {

@@ -79,7 +79,7 @@ function SwitchInterfaceToFR() {
 	//qrcode
 	$("#texteqrcode").html("<b>Téléchargez l'application Lifemap</b><br>pour prolonger l'expérience. <br><small>Scannez le QR code ci-dessous pour accéder au Play Store d'Android</small>")
 	//attribution
-//	$("#attrib").html("<b>Lifemap</b> pour l'exposition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard || Auteur : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Données : NCBI | Contributeurs : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
+	$("#attrib").html("<b>Lifemap</b> pour l\'exposition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard<br>Auteur : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Données : NCBI | Contributeurs : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
 
 }
 function SwitchInterfaceToEN() {
@@ -145,7 +145,7 @@ function SwitchInterfaceToEN() {
 	//qr code
 	$("#texteqrcode").html("<b>Download the Lifemap App</b><br>to keep exploring the Tree of Life! <br><small>Scan the QR code below and download it on the Android Play Store</small>")
 	//attribution
-//	$("#attrib").html("<b>Lifemap</b> for the exhibition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard || Author : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Data : NCBI | Contributors : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
+	$("#attrib").html("<b>Lifemap</b> for the exhibition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard || Author : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Data : NCBI | Contributors : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
 
 }
 function SwitchTreeVersion(treeversion) {
@@ -153,7 +153,7 @@ function SwitchTreeVersion(treeversion) {
 	if (treeversion==="tree-fr") ServerAddress = "lifemap-fr.univ-lyon1.fr";
 	if (treeversion==="tree-en1") ServerAddress = "lifemap.univ-lyon1.fr";
 	if (treeversion==="tree-en2") ServerAddress = "lifemap-ncbi.univ-lyon1.fr";
-	setmaplayer('http://'+ServerAddress+'/retina_tiles/{z}/{x}/{y}.png');
+	setmaplayer('https://'+ServerAddress+'/retina_tiles/{z}/{x}/{y}.png');
 	loadSearchFunction() //reload search functions with correct server address based on tree language.
 }
 function SwitchWikiVersion(wikiversion) {
