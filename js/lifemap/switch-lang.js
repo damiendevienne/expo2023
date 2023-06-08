@@ -141,7 +141,10 @@ function SwitchInterfaceToEN() {
 	//texte expo
 	$("#texteaccrochefds").html("Explore with Lifemap the<br>evolutionary links connecting<br>all species on earth...")
 	$("#textequickaccess").html("Quick access to your favorite species!")
-	$("#textequickaccess2").html("Quick access to your favorite species!")
+	$("#textequickaccess2").html("The soil of our forests")
+  $("#textequickaccess3").html("The human body")
+  $("#textequickaccess4").html("In the kitchen")
+  $("#textequickaccess5").html("The water")
 	//qr code
 	$("#texteqrcode").html("<b>Download the Lifemap App</b><br>to keep exploring the Tree of Life! <br><small>Scan the QR code below and download it on the Android Play Store</small>")
 	//attribution
