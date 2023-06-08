@@ -86,7 +86,7 @@ var police_size = 10;
 
     /* L'eau */
      var arraySpecies5 = [
-     		[1218,   ["Prochlorococcus","Prochlorococcus"]],
+     		[1218,   ["Prochlorococcus","<i>Prochlorococcus</i>"]],
      		[198251, ["Candidatus Pelagibacter","Candidatus Pelagibacter"]],
      		[70863,  ["Shewanella oneidensis","Shewanella oneidensis"]],
      		[6083,   ["Hydra","Hydre"]],
@@ -177,7 +177,10 @@ function displaySpecies_BS(somespeciesafter,d) {
 			var caption = document.createElement("figcaption");
 			caption.setAttribute("class","figure-caption");
 			caption.setAttribute("id","legend_"+imageName);
-			var divLegend = document.createTextNode(dicoSpecies[imageName][indexLangue]);
+			//var divLegend = document.createTextNode(dicoSpecies[imageName][indexLangue]);
+/*			var divLegend = document.html(dicoSpecies[imageName][indexLangue]);*/
+			var divLegend  = document.createElement("p");
+			divLegend.innerHTML = dicoSpecies[imageName][indexLangue];
 			caption.appendChild(divLegend);
 			fig.appendChild(divImage);
 			fig.appendChild(caption);
