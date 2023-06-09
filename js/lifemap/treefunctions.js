@@ -529,3 +529,47 @@ function mrcaroute() {
    		jsonp : 'json.wrf'
    	})
 };
+
+
+
+
+// Action quand on clique sur une espece
+// -------------------------------------
+function zoomtosapiens() {
+
+	map.removeLayer(markersRoute);
+	map.removeLayer(polyline);
+  if (selected!=0) {
+	  degrise(selected);
+	  selected = 0;
+	}
+  var taxidok = 9606;
+  var URL_PREFIX = "https://"+ServerAddress+"/solr/taxo/suggesthandler?suggest.q=";
+  var URL_PREFIX_FINAL = "https://"+ServerAddress+"/solr/taxo/select?q=taxid:";
+  var URL_SUFFIX = "&wt=json";
+  var URL = URL_PREFIX_FINAL + taxidok + URL_SUFFIX;
+  var largeur = window.innerWidth; // maj de la largeur en cas de modif
+    $.ajax({
+      url : URL,
+      success : function(data) {
+        map.removeLayer(SPfocus);
+        var docs = JSON.stringify(data.response.docs);
+        var jsonData = JSON.parse(docs);
+        if ($('#ChoiceExplo').find('i').attr('class').match("fa-check-square-o")===null) {
+          map.setView(jsonData[0].coordinates, jsonData[0].zoom-1);
+        }
+        else {
+          map.flyTo(jsonData[0].coordinates, jsonData[0].zoom-1)
+        }
+
+        SPfocus = L.marker(jsonData[0].coordinates, {icon: pin1})
+        SPfocus.on("click", function() {
+          markofun(taxidok, spnameok,commonnameok,rankok);
+        })
+        SPfocus.addTo(map);
+      },
+      dataType : 'jsonp',
+      jsonp : 'json.wrf'
+    });
+	console.log(" SELECTED NOW = "+selected);
+}

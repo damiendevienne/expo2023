@@ -3,8 +3,9 @@ function setmaplayer(tolUrl) {
 	if (map.hasLayer(tol)) map.removeLayer(tol)
 	if (map.hasLayer(SPfocus)) map.removeLayer(SPfocus)
 	$("#searchinput").val(''); //remove what was in the search box when changing tree. 
-	var tol = new L.TileLayer(tolUrl, {minZoom: 2, maxZoom: 42, detectRetina:false, attribution: '<b>Lifemap</b> pour l\'exposition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard<br>Auteur : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Données : NCBI | Contributeurs : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js'});
-	map.addControl(L.control.attribution({
+	var tol = new L.TileLayer(tolUrl, {minZoom: 2, maxZoom: 42, detectRetina:false});
+/*	var tol = new L.TileLayer(tolUrl, {minZoom: 2, maxZoom: 42, detectRetina:false, attribution: '<b>Lifemap</b> pour l\'exposition \"Microbia - à la rencontre des mondes invisibles\" (2023) - Musée Claude Bernard<br>Auteur : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Données : NCBI | Contributeurs : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js'});
+*/	map.addControl(L.control.attribution({
         position: 'topleft',
         prefix: ''
     }));

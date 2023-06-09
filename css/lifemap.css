@@ -116,6 +116,14 @@ body,html {
 }
 
 
+#attrib {
+	position:absolute;
+	left:10px;
+	top:10px;
+	color: #686868;
+    line-height: 1.2;
+    z-index:10;
+}
 
 
 

@@ -79,8 +79,9 @@ function SwitchInterfaceToFR() {
 	//qrcode
 	$("#texteqrcode").html("<b>Téléchargez l'application Lifemap</b><br>pour prolonger l'expérience. <br><small>Scannez le QR code ci-dessous pour accéder au Play Store d'Android</small>")
 	//attribution
-	$("#attrib").html("<b>Lifemap</b> pour l\'exposition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard<br>Auteur : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Données : NCBI | Contributeurs : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
+	$("#attrib").html("<b>Lifemap</b> pour l\'exposition \"Microbia - à la rencontre des mondes invisibles\" (2023) - Musée Claude Bernard<br>Auteur : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Données : NCBI | Contributeurs : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
 
+	$("#trouverhomosapiens").html("Accés direct à l\'humain dans l'arbre du vivant !")
 }
 function SwitchInterfaceToEN() {
 	//connection
@@ -148,7 +149,8 @@ function SwitchInterfaceToEN() {
 	//qr code
 	$("#texteqrcode").html("<b>Download the Lifemap App</b><br>to keep exploring the Tree of Life! <br><small>Scan the QR code below and download it on the Android Play Store</small>")
 	//attribution
-	$("#attrib").html("<b>Lifemap</b> for the exhibition \"Microbia - à la recherche des mondes invisibles\" (2023) - Musée Claude Bernard || Author : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Data : NCBI | Contributors : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
+	$("#attrib").html("<b>Lifemap</b> for the exhibition \"Microbia - à la rencontre des mondes invisibles\" (2023) - Musée Claude Bernard<br>Author : Damien de Vienne, CNRS, Univ Lyon-1, LBBE | Data : NCBI | Contributors : <u>Simon Penel</u>, Bruno Spataro, Stéphane Delmotte | Leaflet.js")
+	$("#trouverhomosapiens").html("Direct access to Human in the Tree of Life!")
 
 }
 function SwitchTreeVersion(treeversion) {
